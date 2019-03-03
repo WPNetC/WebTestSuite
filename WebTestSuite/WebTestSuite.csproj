@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net46;net461;net462;net47;net471;net472</TargetFrameworks>
     <Authors>William Parker</Authors>
     <Company>SidSoft</Company>
     <PackageId>SidSoft.WebTestSuite</PackageId>
@@ -10,30 +10,49 @@
     <PackageTags>Test Testing Suite Web</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.4</Version>
+    <Version>1.0.28</Version>
     <RepositoryUrl>https://github.com/WPNetC/WebTestSuite</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="StandardTests\AccessTests.cs.pp" />
-    <None Remove="StandardTests\PathsAndPorts.cs.pp" />
-    <None Remove="StandardTests\WebTestBase.cs.pp" />
+    <Compile Remove="lib\net46\**" />
+    <EmbeddedResource Remove="lib\net46\**" />
+    <None Remove="lib\net46\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="StandardTests\AccessTests.cs.pp">
+    <None Remove="contentFiles\StandardTests\AccessTests.cs.pp" />
+    <None Remove="contentFiles\StandardTests\PathsAndPorts.cs.pp" />
+    <None Remove="contentFiles\StandardTests\WebTestBase.cs.pp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="contentFiles\StandardTests\AccessTests.cs.pp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="StandardTests\PathsAndPorts.cs.pp">
+    <Content Include="contentFiles\StandardTests\PathsAndPorts.cs.pp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="StandardTests\WebTestBase.cs.pp">
+    <Content Include="contentFiles\StandardTests\WebTestBase.cs.pp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="content\StandardTests\AccessTests.cs.pp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="content\StandardTests\PathsAndPorts.cs.pp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="content\StandardTests\WebTestBase.cs.pp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="lib\" />
   </ItemGroup>
 
 </Project>
