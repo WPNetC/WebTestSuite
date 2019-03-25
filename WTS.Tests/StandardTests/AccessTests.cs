@@ -1,10 +1,10 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
-using $rootnamespace$.Common;
+using WTS.Tests.Common;
 
-namespace $rootnamespace$.StandardTests
+namespace WTS.Tests.StandardTests
 {
     [TestClass]
     public class AccessTests : WebTestBase

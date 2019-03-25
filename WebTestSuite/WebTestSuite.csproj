@@ -9,7 +9,7 @@
     <Copyright>SidSoft 2019</Copyright>
     <PackageTags>Test Testing Suite Web</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>1.0.28</Version>
     <RepositoryUrl>https://github.com/WPNetC/WebTestSuite</RepositoryUrl>
   </PropertyGroup>
@@ -30,19 +30,7 @@
     <Content Include="contentFiles\StandardTests\AccessTests.cs.pp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="contentFiles\StandardTests\PathsAndPorts.cs.pp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="contentFiles\StandardTests\WebTestBase.cs.pp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="content\StandardTests\AccessTests.cs.pp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="content\StandardTests\PathsAndPorts.cs.pp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="content\StandardTests\WebTestBase.cs.pp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -1,6 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net;
 using System.Net.Http;
+using System.Text.RegularExpressions;
+using $rootnamespace$.Common;
 
 namespace $rootnamespace$.StandardTests
 {
@@ -8,7 +10,16 @@ namespace $rootnamespace$.StandardTests
     public class AccessTests : WebTestBase
     {
         [TestMethod]
-        public void CanAccessSite()
+        public void PageIsHTML5()
+        {
+            var url = $"http://{PathsAndPorts.BASE_ADDR}";
+            var html = GetHtml(url);
+            Assert.IsTrue(Regex.IsMatch(html, "<!doctype html>", RegexOptions.IgnoreCase),
+                $"Page at {url} is not HTML5 doc type");
+        }
+
+        [TestMethod]
+        public void CanAccessSiteHttp()
         {
             var uri = new System.Uri($"http://{PathsAndPorts.BASE_ADDR}");
             Assert.IsTrue(TryUri(uri), $"Cannot access site on http at: {uri.AbsoluteUri}");

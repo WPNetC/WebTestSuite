@@ -1,53 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>SidSoft.WebTestSuite</id>
-    <version>1.0.30.1</version>
+    <version>1.0.30.25</version>
     <authors>William Parker</authors>
     <owners>William Parker</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Set of base test to be run against websites and services</description>
+    <description>Set of base tests to be run against websites and services</description>
     <releaseNotes>Initial release</releaseNotes>
     <copyright>SidSoft 2019</copyright>
     <tags>Test Testing Suite Web</tags>
     <repository url="https://github.com/WPNetC/WebTestSuite" />
     <dependencies>
-      <group targetFramework=".NETFramework4.6">
-        <dependency id="MSTest.TestFramework" version="1.3.2" exclude="Build,Analyzers" />
+      <group targetFramework=".NETFramework4.5">
         <dependency id="System.Net.Http" version="4.2.0" exclude="Build,Analyzers" />
+        <dependency id="MSTest.TestAdapter" version="1.3.2" exclude="Build,Analyzers" />
+        <dependency id="MSTest.TestFramework" version="1.3.2" exclude="Build,Analyzers" />
+        <dependency id="HtmlAgilityPack" version="1.9.2" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.1" exclude="Build,Analyzers" />
+        <dependency id="RestSharp" version="106.6.9" exclude="Build,Analyzers" />
       </group>
       <group targetFramework=".NETFramework4.7">
+        <dependency id="MSTest.TestAdapter" version="1.3.2" exclude="Build,Analyzers" />
         <dependency id="MSTest.TestFramework" version="1.3.2" exclude="Build,Analyzers" />
+        <dependency id="HtmlAgilityPack" version="1.9.2" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.1" exclude="Build,Analyzers" />
+        <dependency id="RestSharp" version="106.6.9" exclude="Build,Analyzers" />
       </group>
     </dependencies>
     <frameworkAssemblies>
-      <frameworkAssembly assemblyName="System.Net" />
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Net" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework=".NETFramework4.5" />
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.7" />
+      <frameworkAssembly assemblyName="System.Net" targetFramework=".NETFramework4.7" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.7" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework=".NETFramework4.7" />
       <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.7" />
     </frameworkAssemblies>
     <contentFiles>
-      <files include="any/net46/contentFiles/StandardTests/AccessTests.cs.pp" buildAction="Content" />
-      <files include="any/net47/contentFiles/StandardTests/AccessTests.cs.pp" buildAction="Content" />
-      <files include="any/netstandard2.0/contentFiles/StandardTests/AccessTests.cs.pp" buildAction="Content" />
-      
-      <files include="any/net46/contentFiles/StandardTests/PathsAndPorts.cs.pp" buildAction="Content" />
-      <files include="any/net47/contentFiles/StandardTests/PathsAndPorts.cs.pp" buildAction="Content" />
-      <files include="any/netstandard2.0/contentFiles/StandardTests/PathsAndPorts.cs.pp" buildAction="Content" />
-      
-      <files include="any/net46/contentFiles/StandardTests/WebTestBase.cs.pp" buildAction="Content" />
-      <files include="any/net47/contentFiles/StandardTests/WebTestBase.cs.pp" buildAction="Content" />
-      <files include="any/netstandard2.0/contentFiles/StandardTests/WebTestBase.cs.pp" buildAction="Content" />
-      
-      <files include="any/net46/content/StandardTests/AccessTests.cs.pp" buildAction="Content" />
-      <files include="any/net47/content/StandardTests/AccessTests.cs.pp" buildAction="Content" />
-      <files include="any/netstandard2.0/content/StandardTests/AccessTests.cs.pp" buildAction="Content" />
-      
-      <files include="any/net46/content/StandardTests/PathsAndPorts.cs.pp" buildAction="Content" />
-      <files include="any/net47/content/StandardTests/PathsAndPorts.cs.pp" buildAction="Content" />
-      <files include="any/netstandard2.0/content/StandardTests/PathsAndPorts.cs.pp" buildAction="Content" />
-      
-      <files include="any/net46/content/StandardTests/WebTestBase.cs.pp" buildAction="Content" />
-      <files include="any/net47/content/StandardTests/WebTestBase.cs.pp" buildAction="Content" />
-      <files include="any/netstandard2.0/content/StandardTests/WebTestBase.cs.pp" buildAction="Content" />
+      <files include="any/net45/contentFiles/App.config" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/App.config" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/App.config" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/App.config" buildAction="Content" xmlns="" />
+      <files include="any/net45/contentFiles/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/contentFiles/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/contentFiles/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/contentFiles/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/contentFiles/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/contentFiles/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/contentFiles/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/contentFiles/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/contentFiles/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/contentFiles/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/App.config" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/App.config" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/App.config" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/App.config" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/Common\PathsAndPorts.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/Common\WebTestBase.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/StandardTests\AccessTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/StandardTests\ContentTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/StandardTests\SEOTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/StandardTests\SocialMediaTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net45/content/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net46/content/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/net47/content/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
+      <files include="any/netstandard2.0/content/StandardTests\ValidationTests.cs.pp" buildAction="Content" xmlns="" />
     </contentFiles>
   </metadata>
 </package>
